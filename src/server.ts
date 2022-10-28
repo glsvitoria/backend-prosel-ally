@@ -34,6 +34,8 @@ server.get('/destination', async (req: Request, res: Response) => {
    res.json(JSON.parse(detinations))
 })
 
-server.listen(3000, () => {
-	console.log(`[SERVER] Running at http://localhost:3000`)
+const PORT = 3000 || process.env.PORT
+
+server.listen(PORT, () => {
+	console.log(`[SERVER] Running at ${PORT}`)
 })
